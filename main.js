@@ -14,9 +14,7 @@ function popularHtml(data) {
 
   data.forEach(item => {
     html += ` <div class="card">
-    <figure style= "background-image: url(${
-      item.photo
-    })" alt="" class="photo"></figure>
+    <figure style= "background-image: url(${item.photo})" alt="" class="photo"></figure>
     <h4 class="name">${item.name}</h4>
     <p class="p-price"><span class="price">${item.price}
     </span><a href="" class="btn">Reserve</a></p>
