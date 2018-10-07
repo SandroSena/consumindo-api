@@ -1,18 +1,13 @@
 let container = document.querySelector(".container-main");
-let photo = document.querySelector(".photo");
-let name = document.querySelector(".nome");
-let price = document.querySelector(".price");
 
 fetch("http://airbnb.douglasmaia.com/api/properties")
   .then(response => response.json())
-  .then(response => {
-    popularHtml(response);
-  });
+  .then(data => popularHtml(data));
 
 function popularHtml(data) {
   let html = "";
 
-  data.forEach(item => {
+  data.map(item => {
     html += ` <div class="card">
     <figure style= "background-image: url(${item.photo})" alt="" class="photo"></figure>
     <h4 class="name">${item.name}</h4>
